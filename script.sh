@@ -7,5 +7,6 @@ usermod -aG sudo $username
 dpkg-reconfigure locales
 apt update && sudo apt upgrade
 apt install zsh
-su -m $username
-echo "You should be within the $username shell"
+su -c $username "echo "You should be within the $username shell"
+cd /home/$username/
+ping 1.1.1.1"
