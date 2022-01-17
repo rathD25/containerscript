@@ -1,6 +1,7 @@
-#!/bin/bash
-echo Enter new user's name: 
+#!/bin/sh
+echo "Enter new user's name: "
 read username
+echo "Adding user $username"
 adduser $username
 usermod -aG sudo $username
 su $username
